@@ -1,0 +1,20 @@
+Insert          Append          Param
+~2.178s         4.0038ms        extraLargeArray
+7.6114ms        469.7us         largeArray
+136.1us         46.5us          mediumArray
+17.1us          9us             smallArray
+5.6us           6.8us           tinyArray
+
+
+Insert is an n^2 algorithm because it must touch every element in the pre-existing array and 
+shift it down a spot before it puts a new element at the beginning.
+On the other hand, Append is a worst case n algorithm 
+(if the array exceeds space and must be transferred to different location), 
+but average case of constant time.
+
+Append scales much better in time performance. 
+It's easy to tell based on the big O of the algorithms, and the collected data.
+
+Note that this applies specifically to this instance (dealing with arrays). Unshift type operations may be 
+used in other custom data structures with
+vastly improved runtimes (such as linked lists or deques).
