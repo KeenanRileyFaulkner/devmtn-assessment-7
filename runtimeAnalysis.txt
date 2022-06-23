@@ -6,9 +6,9 @@ Insert          Append          Param
 5.6us           6.8us           tinyArray
 
 
-Insert is an n^2 algorithm because it must touch every element in the pre-existing array and 
+Insert is an O(n^2) algorithm because it must touch every element in the pre-existing array and 
 shift it down a spot before it puts a new element at the beginning.
-On the other hand, Append is a worst case n algorithm 
+On the other hand, Append is a worst case O(n) algorithm 
 (if the array exceeds space and must be transferred to different location), 
 but average case of constant time.
 
